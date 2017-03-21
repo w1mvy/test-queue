@@ -81,9 +81,9 @@ module TestQueue
         else
           2
         end
-      unless @concurrency > 0
-        raise ArgumentError, "Worker count (#{@concurrency}) must be greater than 0"
-      end
+      #unless @concurrency > 0
+      #  raise ArgumentError, "Worker count (#{@concurrency}) must be greater than 0"
+      #end
 
       @relay_connection_timeout =
         (ENV['TEST_QUEUE_RELAY_TIMEOUT'] && ENV['TEST_QUEUE_RELAY_TIMEOUT'].to_i) ||
